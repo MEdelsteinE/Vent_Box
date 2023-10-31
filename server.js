@@ -7,9 +7,9 @@ const { engine } = require('express-handlebars');
 const session = require('express-session');
 
 // Import our view_routes
-const view_routes = require('./routesview_routes');
-const user_routes = require('./routesuser_routes');
-const coo_routes = require('./routesvent_routes');
+const view_routes = require('./view_routes');
+const user_routes = require('./user_routes');
+const vent_routes = require('./vents_routes');
 
 // Create the port number and prepare for heroku with the process.env.PORT value
 const PORT = process.env.PORT || 3333;

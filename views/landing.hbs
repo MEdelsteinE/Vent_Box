@@ -1,0 +1,14 @@
+<h1 class="text-center">The SteamBox</h1>
+
+
+<section class="column align-center vent-output">
+  {{#each vent}}
+    <div class="vent">
+      <h3 class="text-center">{{text}}</h3>
+      <div class="row justify-between">
+        <p>{{date}}</p>
+        <p>By: {{author.email}}</p>
+      </div>
+    </div>
+  {{/each}}
+</section>
