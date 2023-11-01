@@ -49,7 +49,7 @@ User.prototype.validatePass = async function (form_password) {
 }
 
 User.hasMany(Vent, { as: 'vents', foreignKey: 'author_id' });
-Coo.belongsTo(User, { as: 'author', foreignKey: 'author_id' });
+Vent.belongsTo(User, { as: 'author', foreignKey: 'author_id' });
 
 
 module.exports = User;
