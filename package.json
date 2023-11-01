@@ -13,7 +13,8 @@
     "nodemon": "^3.0.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
   },
   "name": "vent_box",
   "description": "A place to get your frustrations out",
