@@ -45,9 +45,12 @@ router.get('/', authenticate, async (req, res) => {
     }
   });
 
+  const ventsData = vents.map(c => c.get({ plain: true }))
+  console.log(ventsData);
+
   res.render('landing', {
     user: req.user,
-    vents: vents.map(c => c.get({ plain: true }))
+    vents: ventsData
   });
 });
 
