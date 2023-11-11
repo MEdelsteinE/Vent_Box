@@ -36,9 +36,9 @@ app.use(session({
 }));
 
 // Load our view routes at the root level '/'
-app.use('/', [view_routes, vent_routes]);
+app.use('/', [view_routes, vent_routes, dashboard_routes]);
 // /auth/register
-app.use('/auth', user_routes, dashboard_routes);
+app.use('/auth', user_routes);
 
 // Sync and create tables
 db.sync({ force: false })
