@@ -10,6 +10,7 @@ const session = require('express-session');
 const view_routes = require('./routes/view_routes');
 const user_routes = require('./routes/user_routes');
 const vent_routes = require('./routes/vents_routes');
+const dashboard_routes = require('./routes/dashboard_routes');
 
 // Create the port number and prepare for heroku with the process.env.PORT value
 const PORT = process.env.PORT || 3333;
@@ -37,7 +38,7 @@ app.use(session({
 // Load our view routes at the root level '/'
 app.use('/', [view_routes, vent_routes]);
 // /auth/register
-app.use('/auth', user_routes);
+app.use('/auth', user_routes, dashboard_routes);
 
 // Sync and create tables
 db.sync({ force: false })
