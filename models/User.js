@@ -1,9 +1,6 @@
-// Import Model and DataTypes from sequelize
 const { Model, DataTypes } = require('sequelize');
 const db = require('../config/connection');
-
 const { hash, compare } = require('bcrypt');
-
 const Vent = require('./Vent');
 
 class User extends Model { }

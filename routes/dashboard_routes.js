@@ -9,8 +9,7 @@ function isAuthenticated(req, res, next) {
   
     next();
   }
-  
-  // Attach user data to the request if they are logged in
+
   async function authenticate(req, res, next) {
     const user_id = req.session.user_id;
   

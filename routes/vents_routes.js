@@ -3,7 +3,6 @@ const router = require('express').Router();
 const User = require('../models/User');
 const Vent = require('../models/Vent');
 
-// Block a route if a user is not logged in
 function isAuthenticated(req, res, next) {
   if (!req.session.user_id) {
     return res.redirect('/login');
@@ -12,7 +11,6 @@ function isAuthenticated(req, res, next) {
   next();
 }
 
-// Attach user data to the request if they are logged in
 async function authenticate(req, res, next) {
   const user_id = req.session.user_id;
 
@@ -25,7 +23,6 @@ async function authenticate(req, res, next) {
   next();
 }
 
-// Vent post
 router.post('/vent', isAuthenticated, authenticate, async (req, res) => {
   try {
     const vent = await Vent.create(req.body);
