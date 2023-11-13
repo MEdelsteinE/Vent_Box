@@ -9,7 +9,7 @@
   }
   
   a {
-    color: #fff;
+    color: #120A8F;
     text-decoration: none;
   }
   
@@ -38,7 +38,7 @@
   }
   
   header {
-    background: #555;
+    background: linear-gradient(to top, #fff, grey);
     color: #fff;
     padding: 8px 5%;
     margin-bottom: 35px;
@@ -52,7 +52,7 @@
     width: 380px;
     display: flex;
     flex-direction: column;
-    margin: 35px auto 0;
+    margin: 100px auto 0;
   }
   
   form h1 {
@@ -67,6 +67,20 @@
     padding: 7px 10px;
     margin: 5px 0;
   }
+
+  form button {
+    border-radius: 15px;
+  }
+
+  input {
+    border-radius: 15px;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    margin: 100px auto 0;
+  }
   
   .vent-output {
     margin-top: 30px;
@@ -75,6 +89,7 @@
   .vent {
     margin-bottom: 15px;
     background-color: bisque;
+    border: 2px solid;
   }
   
   .vent h3 {
